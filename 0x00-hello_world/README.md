@@ -3,4 +3,5 @@
 ### Summary
 ```
 0-preprocessor            // runs C file through preprocessor & save result into another file
+1-compiler                // compiles a C file but does not link
 ```
