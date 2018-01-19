@@ -20,14 +20,10 @@ int main(void)
 
 	for (i = BEGINNING; i <= END; i++)
 	{
-		if (i / STEP == decs + 1)
-		{
-			decs++;
-		}
-
 		if (ones == STEP)
 		{
 			ones = 0;
+			decs++;
 		}
 
 		putchar(decs + '0');
