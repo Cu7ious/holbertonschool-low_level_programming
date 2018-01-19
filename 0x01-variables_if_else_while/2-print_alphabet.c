@@ -9,7 +9,7 @@
 int main(void)
 {
 	int a = 0;
-	char *alphabet = "abcdfghijklmnoprstuvwxyz\n";
+	char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
 	int length = (int) strlen(alphabet);
 
 	while (a <= length)
