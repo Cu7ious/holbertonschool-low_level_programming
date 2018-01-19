@@ -1,15 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void) {
-
+/**
+ * main - root function
+ *
+ * Return: always 0
+ **/
+int main(void)
+{
 	int a = 0;
-	char* alphabet = "abcdefghijklmnopqrstuvwxyz\n";
+	char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
 	int length = (int) strlen(alphabet);
 
 	while (a <= length)
 	{
-		putchar(alphabet[a]);
+		if (alphabet[a] != "q" && alphabet[a] != "e")
+			putchar(alphabet[a]);
+
 		a++;
 	}
 
