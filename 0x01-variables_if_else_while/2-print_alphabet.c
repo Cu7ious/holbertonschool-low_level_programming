@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 /**
  * main - root function
@@ -8,15 +7,13 @@
  **/
 int main(void)
 {
-	int a = 0;
-	char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
-	int length = (int) strlen(alphabet);
+	char a;
 
-	while (a <= length)
+	for (a = 'a'; a <= 'z'; a++)
 	{
-		putchar(alphabet[a]);
-		a++;
+		putchar(a);
 	}
+	putchar('\n');
 
 	return (0);
 }
