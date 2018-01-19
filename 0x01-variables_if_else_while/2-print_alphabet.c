@@ -9,14 +9,12 @@
 int main(void)
 {
 	int a = 0;
-	char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
+	char *alphabet = "abcdfghijklmnoprstuvwxyz\n";
 	int length = (int) strlen(alphabet);
 
 	while (a <= length)
 	{
-		if (alphabet[a] != "q" && alphabet[a] != "e")
-			putchar(alphabet[a]);
-
+		putchar(alphabet[a]);
 		a++;
 	}
 
