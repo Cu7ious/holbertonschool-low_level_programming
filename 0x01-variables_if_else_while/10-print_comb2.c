@@ -25,7 +25,8 @@ int main(void)
 			decs++;
 		}
 
-		if (ones >= STEP) {
+		if (ones == STEP)
+		{
 			ones = 0;
 		}
 
