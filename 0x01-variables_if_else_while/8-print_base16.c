@@ -7,13 +7,25 @@
  **/
 int main(void)
 {
+	#define DEC_0 0
+	#define DEC_9 9
+	#define HEX_DEC_10 97
+	#define HEX_DEC_16 102
+
+	int dec;
 	int hex;
 
-	for (hex=0x00; hex <= 15; hex++)
+	for (dec = DEC_0; dec <= DEC_9; dec++)
 	{
-		printf("%x", hex);
+		putchar(dec + '0');
 	}
-	/* putchar('\n'); */
+
+	for (hex = HEX_DEC_10; hex <= HEX_DEC_16; hex++)
+	{
+		putchar(hex + '\0');
+	}
+
+	putchar('\n');
 
 	return (0);
 }
