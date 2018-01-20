@@ -9,8 +9,8 @@ int main(void)
 {
 	#define DEC_0 0
 	#define DEC_9 9
-	#define HEX_DEC_10 97
-	#define HEX_DEC_16 102
+	#define HEX_DEC_10 ('\x61')
+	#define HEX_DEC_16 ('\x66')
 
 	int dec;
 	int hex;
@@ -22,7 +22,7 @@ int main(void)
 
 	for (hex = HEX_DEC_10; hex <= HEX_DEC_16; hex++)
 	{
-		putchar(hex + '\0');
+		putchar(hex + '\x00');
 	}
 
 	putchar('\n');
