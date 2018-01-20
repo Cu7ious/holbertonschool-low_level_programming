@@ -7,8 +7,8 @@
  **/
 int main(void)
 {
-	int t; /* tens */
-	int o; /* ones */
+	int t;
+	int o;
 
 	for (t = 0; t <= 9; t++)
 		for (o = 0; o <= 9; o++)
