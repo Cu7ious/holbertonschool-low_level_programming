@@ -11,7 +11,9 @@ int main(void)
 	int o;
 
 	for (t = 0; t <= 9; t++)
+	{
 		for (o = 0; o <= 9; o++)
+		{
 			if (o > t)
 			{
 				if (!(t == 0 && o == 1))
@@ -23,6 +25,10 @@ int main(void)
 				putchar(t + '0');
 				putchar(o + '0');
 			}
+		}
+	}
+
+	putchar('\n');
 
 	return (0);
 }
