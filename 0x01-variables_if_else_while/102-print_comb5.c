@@ -12,27 +12,27 @@ int main(void)
 	int d;
 	int e;
 
-	for (t=0;t<=9;t++)
+	for (t = 0; t <= 9; t++)
 	{
-		for (s=0;s<=9;s++)
+		for (s = 0; s <= 9; s++)
 		{
-			for (d=0;d<=9;d++)
+			for (d = 0; d <= 9; d++)
 			{
-				for (e=0;e<=9;e++)
+				for (e = 0; e <= 9; e++)
 				{
-					if ((t<d && s<=e) || (t==d && s<e))
+					if ((t < d) || (t == d && s < e))
 					{
-						putchar(t +'0');
-						putchar(s +'0');
+						putchar(t + '0');
+						putchar(s + '0');
 						putchar(' ');
-						putchar(d +'0');
-						putchar(e +'0');
+						putchar(d + '0');
+						putchar(e + '0');
 
-						if (!(t==9 && s==8))
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					if (!(t == 9 && s == 8))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 					}
 				}
 			}
