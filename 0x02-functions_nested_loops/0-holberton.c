@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-	char h[9] = "Holberton";
-	unsigned int i;
+	char h[] = "Holberton";
+	int i;
 
 	for (i = 0; i <= 9; i++)
 	{
