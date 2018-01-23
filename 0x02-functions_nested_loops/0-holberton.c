@@ -7,10 +7,11 @@
  */
 int main(void)
 {
+	#define WORD_LENGTH 8
 	int i;
 	char h[] = "Holberton";
 
-	for (i = 0; i <= 8; i++)
+	for (i = 0; i <= WORD_LENGTH; i++)
 	{
 		_putchar(h[i]);
 	}
