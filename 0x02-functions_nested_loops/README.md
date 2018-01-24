@@ -7,4 +7,5 @@ Summary
 1-alphabet.c                // prints the alphabet, in lowercase +\n
 2-print_alphabet_x10.c      // prints 10 times the alphabet, in lowercase +\n
 3-islower.c                 // checks for lowercase character
+4-isalpha.c                 // checks for alphabetic character
 ```
