@@ -1,5 +1,12 @@
 *
-!*.c
-!*.h
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
 !README.md
 !.gitignore
+
+a.out
