@@ -10,3 +10,4 @@
 !.gitignore
 
 a.out
+*-main.c
