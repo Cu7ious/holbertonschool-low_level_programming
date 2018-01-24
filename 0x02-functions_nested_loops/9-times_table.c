@@ -18,25 +18,26 @@ void times_table(void)
 			r = i * m;
 			if (r < 10)
 			{
+				if (m == 0)
+				{
+					_putchar(r + '0');
+				}
+
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 				_putchar(r + '0');
 			}
-			else
+			else if (r >= 10)
 			{
+				_putchar(',');
+				_putchar(' ');
 				_putchar(r / 10 + '0');
 				_putchar(r % 10 + '0');
 			}
 
 			if (m == 9)
-			{
 				_putchar('\n');
-			}
-			else
-			{
-				_putchar(',');
-				if (r < 10)
-					_putchar(' ');
-				_putchar(' ');
-			}
 		}
 	}
 }
