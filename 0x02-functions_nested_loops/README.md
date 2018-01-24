@@ -10,4 +10,5 @@ Summary
 4-isalpha.c                 // checks for alphabetic character
 5-sign.c                    // prints the sign of a number
 6-abs.c                     // computes the absolute value of an integer
+7-print_last_digit.c        // prints the last digit of a number
 ```
