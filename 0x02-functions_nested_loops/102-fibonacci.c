@@ -8,16 +8,20 @@
 void _printer(int n)
 {
 	int i;
-	int fibb = 2;
+	long int fibb1 = 1;
+	long int fibb2 = 2;
+	long int middle;
 
 	for (i = 1; i <= n; i++)
 	{
-		fibb += i;
+		middle = fibb1 + fibb2;
+		fibb1 = fibb2;
+		fibb2 = middle;
 
 		if (i != n)
-			printf("%d, ", fibb);
+			printf("%ld, ", middle);
 		else
-			printf("%d", fibb);
+			printf("%ld", middle);
 	}
 }
 /**
