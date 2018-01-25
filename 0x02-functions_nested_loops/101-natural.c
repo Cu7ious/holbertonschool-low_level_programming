@@ -9,20 +9,13 @@
 void _printer(int n)
 {
 	int i;
-	int t = 0;
-	int f = 0;
+	int sum = 0;
 
 	for (i = 0; i < n; i++)
-	{
-		if (i % 3 == 0)
-			t += i;
+		if (i % 3 == 0 || i % 5 == 0)
+			sum += i;
 
-		if (i % 5 == 0
-			&& i % 3 != 0)
-			f += i;
-	}
-
-	printf("%d\n", t + f);
+	printf("%d\n", sum);
 }
 
 /**
