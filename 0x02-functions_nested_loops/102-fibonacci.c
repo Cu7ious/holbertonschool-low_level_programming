@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * _printer -  computes and prints fibonacci sequence
+ * fibonacci -  computes and prints fibonacci sequence
  * @n: the number
  * Return: nothing
  */
-void _printer(int n)
+void fibonacci(int n)
 {
 	int i;
 	long int fibb1 = 1;
@@ -18,10 +18,10 @@ void _printer(int n)
 		fibb1 = fibb2;
 		fibb2 = middle;
 
+		printf("%ld", middle);
+
 		if (i != n)
-			printf("%ld, ", middle);
-		else
-			printf("%ld", middle);
+			printf(", ");
 	}
 }
 /**
@@ -31,6 +31,6 @@ void _printer(int n)
  */
 int main(void)
 {
-	_printer(50);
+	fibonacci(50);
 	return (0);
 }
