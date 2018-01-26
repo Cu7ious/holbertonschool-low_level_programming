@@ -10,20 +10,18 @@ void more_numbers(void)
 {
 	int ten_times;
 	int fourteen;
+	int first_char;
 
 	for (ten_times = 0; ten_times <= 10; ten_times++)
 	{
 		for (fourteen = 0; fourteen <= 14; fourteen++)
 		{
-			if (fourteen < 10)
-			{
-				_putchar(fourteen + '0');
-			}
-			else
-			{
-				_putchar(fourteen / 10 + '0');
+			first_char = fourteen < 10 ? fourteen : fourteen / 10;
+
+			_putchar(first_char + '0');
+
+			if (fourteen > 9)
 				_putchar(fourteen % 10 + '0');
-			}
 
 		}
 		_putchar('\n');
