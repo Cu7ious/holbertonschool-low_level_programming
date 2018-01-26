@@ -1,6 +1,22 @@
 #include "holberton.h"
 
 /**
+ * printer -  prints symbols to a line
+ * @s:ASCII number of a character
+ * @n: quantity of symbols to print
+ *
+ * Return: void
+ */
+void printer(int s, int n)
+{
+	while (n > 0)
+	{
+		_putchar(s);
+		n--;
+	}
+}
+
+/**
  * print_triangle - prints a triangle
  * @size: size of the triangle
  *
@@ -8,24 +24,22 @@
  */
 void print_triangle(int size)
 {
-	int i;
-	int j;
-	int pad;
+	int spaces, hashes;
 
-	if (size <= 0)
-		_putchar('\n');
-	else
-		for (i = 0; i < size; i++)
+	if (size > 0)
+	{
+		hashes = 1;
+		while (hashes <= size)
 		{
-			pad = size - i;
-			for (j = 1; j <= size; j++)
-			{
-				if (j < pad)
-					_putchar(' ');
-				else
-					_putchar('#');
-			}
+			spaces = size - hashes;
 
-			_putchar('\n');
+			printer(' ', spaces);
+			printer('#', hashes);
+			printer('\n', 1);
+
+			hashes++;
 		}
+	}
+	else
+		_putchar('\n');
 }
