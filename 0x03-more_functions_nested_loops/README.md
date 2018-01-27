@@ -3,7 +3,7 @@
 Summary
 
 ```
-0i-isupper.c              // checks for uppercase character
+0-isupper.c              // checks for uppercase character
 1-isdigit.c               // checks for a digit (0 through 9)
 2-mul.c                   // multiplies two integers
 3-print_numbers.c         // prints the numbers, from 0 to 9, followed by a new line
@@ -14,4 +14,5 @@ Summary
 8-print_square.c          // prints a square, followed by a new line
 9-fizz_buzz.c             // fizz-buzz classical problem
 10-print_triangle.c       // prints a triangle, followed by a new line
+100-prime_factor.c        // finds and prints the largest prime factor of the number 612852475143, +\n
 ```
