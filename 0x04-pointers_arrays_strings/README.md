@@ -9,5 +9,6 @@ Summary
 3-puts.c                      // prints a string, followed by a new line, to stdout
 4-print_rev.c                 // prints a string, in reverse, followed by a new line
 5-rev_string.c                // reverses a string
+6-puts2.c                     // prints one char out of 2 of a string, followed by a new line
 8-print_array.c               // prints n elements of an array of integers, followed by a new line
 ```
