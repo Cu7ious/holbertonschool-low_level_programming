@@ -21,8 +21,12 @@ void puts_half(char *str)
 		? length / 2
 		: (length - 1) / 2;
 
-	for (i = 0; i <= odd_even; i++)
-		_putchar(str[odd_even + i]);
+	if (length % 2 == 0)
+		for (i = 0; i < odd_even; i++)
+			_putchar(str[odd_even + i]);
+	else
+		for (i = 1; i <= odd_even; i++)
+			_putchar(str[odd_even + i]);
 
 	_putchar('\n');
 }
