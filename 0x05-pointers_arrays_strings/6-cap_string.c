@@ -13,6 +13,9 @@ char *cap_string(char *c)
 		'!', '?', '"', '(', ')', '{', '}'
 	};
 
+	if (c[0] >= 'a' && c[0] <= 'z')
+		c[0] = c[0] - ASCII_DIF;
+
 	while (c[i] != '\0')
 	{
 		for (j = 0; seps[j] != '\0'; j++)
