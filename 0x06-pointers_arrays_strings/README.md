@@ -2,6 +2,6 @@
 
 Summary
 ```
-0-memset.
+0-memset        // fills memory with a constant byte
 
 ```
