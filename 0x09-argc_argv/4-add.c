@@ -54,25 +54,17 @@ int main(int argc, char *argv[])
 {
 	int i = 1;
 
-	if (argc <= 1)
+	while (i < argc)
 	{
-		printf("0\n");
-		return (0);
-	}
-	else if (argc > 2)
-	{
-		while (i < argc)
+		if (!is_num(argv[i]))
 		{
-			if (!is_num(argv[i]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-
-			i++;
+			printf("Error\n");
+			return (1);
 		}
 
-		printf("%d\n", adder(argc, argv));
-		return (0);
+		i++;
 	}
+
+	printf("%d\n", adder(argc, argv));
+	return (0);
 }
