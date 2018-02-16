@@ -11,11 +11,12 @@
 void *malloc_checked(unsigned int b)
 {
 	void *p;
+	const int ERR_CODE = 98;
 
 	p = malloc(b);
 
 	if (p == NULL)
-		return (NULL);
+		exit(ERR_CODE);
 
 	return (p);
 }
