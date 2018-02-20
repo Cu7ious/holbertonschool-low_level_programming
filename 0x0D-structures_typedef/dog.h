@@ -2,24 +2,19 @@
 #define _DOG_H_
 
 /**
- * struct Dog - a dog data structure
- * @name: Dog's name, string
- * @age: Dog's age, float
- * @owner: Dog Owner's name, string
+ * struct dog - a dog data structure
+ * @name: dog's name, string
+ * @age: dog's age, float
+ * @owner: dog Owner's name, string
  *
  * Description: We are building a dog
  */
-struct Dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
-
-/**
- * dog - Typedef for struct Dog
- */
-typedef struct Dog dog;
+} dog;
 
 int _putchar(char c);
 void init_dog(struct dog *d, char *name, float age, char *owner);
