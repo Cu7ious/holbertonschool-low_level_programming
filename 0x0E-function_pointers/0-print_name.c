@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 /**
  * print_name - prints a name with a callback
  * @name: name to print, string
@@ -7,5 +9,8 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
+	if (name || f == NULL)
+		return;
+
 	f(name);
 }
