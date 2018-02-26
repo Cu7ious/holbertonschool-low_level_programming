@@ -78,7 +78,7 @@ void print_all(const char * const format, ...)
 	};
 	va_list args;
 	int i, j;
-	char *sep = ", ";
+	char *sep = "";
 
 	va_start(args, format);
 
@@ -90,13 +90,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *fids[j].fid)
 			{
-				if (format[i + 1] == '\0')
-					sep = "";
-				else
-					sep = ", ";
-
-				fids[j].f(args);
 				printf("%s", sep);
+				fids[j].f(args);
+				sep = ", ";
 			}
 			j++;
 		}
