@@ -6,6 +6,7 @@
  * _printchar - prints a char
  * @list: list to print from
  *
+ * Return: void
  */
 void _printchar(va_list list)
 {
@@ -16,6 +17,7 @@ void _printchar(va_list list)
  * _printint - prints an int
  * @list: list to print from
  *
+ * Return: void
  */
 void _printint(va_list list)
 {
@@ -26,6 +28,7 @@ void _printint(va_list list)
  * _printfloat - prints a float
  * @list: list to print from
  *
+ * Return: void
  */
 void _printfloat(va_list list)
 {
@@ -36,6 +39,7 @@ void _printfloat(va_list list)
  * _printstring - prints a string
  * @list: list to print from
  *
+ * Return: void
  */
 void _printstring(va_list list)
 {
@@ -73,15 +77,16 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	va_list args;
-	int i = 0, j = 0;
+	int i, j;
 	char *sep = ", ";
 
 	va_start(args, format);
 
+	i = 0;
 	while (format && format[i] > '\0')
 	{
 		j = 0;
-		while (fids[j].fid)
+		while (fids[j].fid != NULL)
 		{
 			if (format[i] == *fids[j].fid)
 			{
