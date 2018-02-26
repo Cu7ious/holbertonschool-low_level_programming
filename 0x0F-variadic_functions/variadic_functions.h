@@ -1,6 +1,8 @@
 #ifndef _variadic_functions_h_
 #define _variadic_functions_h_
 
+#include <stdarg.h>
+
 /**
  * struct func_type - structure for the print function
  * @fid: type identifier
