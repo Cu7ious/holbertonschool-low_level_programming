@@ -1,5 +1,54 @@
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
+
+/**
+ * _printchar - prints a char
+ * @list: list to print from
+ *
+ */
+void _printchar(va_list list)
+{
+	printf("%c", va_arg(list, int));
+}
+
+/**
+ * _printint - prints an int
+ * @list: list to print from
+ *
+ */
+void _printint(va_list list)
+{
+	printf("%d", va_arg(list, int));
+}
+
+/**
+ * _printfloat - prints a float
+ * @list: list to print from
+ *
+ */
+void _printfloat(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+
+/**
+ * _printstring - prints a string
+ * @list: list to print from
+ *
+ */
+void _printstring(va_list list)
+{
+	char *ptr = va_arg(list, char *);
+
+	if (ptr == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+
+	printf("%s", ptr);
+}
 
 /**
  * print_all - prints anything
@@ -16,39 +65,40 @@
  */
 void print_all(const char * const format, ...)
 {
-	va_list valist;
-	char *string, *sep;
-	int i = 0;
+	print_func fids[] = {
+		{"c", _printchar},
+		{"i", _printint},
+		{"f", _printfloat},
+		{"s", _printstring},
+		{NULL, NULL}
+	};
+	va_list args;
+	int i = 0, j = 0;
+	char *sep = ", ";
 
-	va_start(valist, format);
+	va_start(args, format);
+
 	while (format[i] > '\0')
 	{
-		if (format[i + 1] == '\0')
-			sep = "";
-		else
-			sep = ", ";
-
-		switch (format[i])
+		j = 0;
+		while (fids[j].fid)
 		{
-			case 'c':
-				printf("%c%s", va_arg(valist, int), sep);
-				break;
-			case 'i':
-				printf("%d%s", va_arg(valist, int), sep);
-				break;
-			case 'f':
-				printf("%f%s", va_arg(valist, double), sep);
-				break;
-			case 's':
-				string = va_arg(valist, char*);
-				if (!string)
-					printf("(nil)%s", sep);
+			if (format[i] == *fids[j].fid)
+			{
+				if (format[i + 1] == '\0')
+					sep = "";
 				else
-					printf("%s%s", string, sep);
-				break;
+					sep = ", ";
+
+				printf("%s", sep);
+				fids[j].f(args);
+			}
+			j++;
 		}
+
 		i++;
 	}
-	va_end(valist);
+
 	printf("\n");
+	va_end(args);
 }
