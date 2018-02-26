@@ -90,8 +90,8 @@ void print_all(const char * const format, ...)
 				else
 					sep = ", ";
 
-				printf("%s", sep);
 				fids[j].f(args);
+				printf("%s", sep);
 			}
 			j++;
 		}
