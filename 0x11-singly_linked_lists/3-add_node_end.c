@@ -17,25 +17,36 @@ int _strlen(const char *s)
 }
 
 /**
- * add_node - adds a new node at the beginning of a list_t list
+ * add_node_end - adds a new node at the end of a list_t list
  * @head: head of the linked list
  * @str: string to add
  *
  * Return: list_t
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *node;
+	list_t *temp;
 
 	node = malloc(sizeof(list_t));
 	if (node == NULL)
 		return (node);
 
 	node->str = strdup(str);
+	node->next = NULL;
 	node->len = _strlen(str);
-	node->next = *head;
 
-	*head = node;
+	if (*head == NULL)
+	{
+		*head = node;
+		return (node);
+	}
 
-	return (*head);
+	temp = *head;
+	while (temp->next != NULL)
+		temp = temp->next;
+
+	temp->next = node;
+
+	return (node);
 }
