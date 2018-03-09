@@ -1,7 +1,8 @@
 #ifndef _holberton_h_
 #define _holberton_h_
 
-#include <strlib.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int _putchar(char c);
 
