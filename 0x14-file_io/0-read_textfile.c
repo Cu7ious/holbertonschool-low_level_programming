@@ -10,17 +10,13 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_descriptor, r, w;
-	char *buff;
+	char buff[BUFSIZ];
 
 	if (filename == NULL || letters == 0)
 		return (0);
 
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
-		return (0);
-
-	buff = malloc(sizeof(char) * letters);
-	if (buff == NULL)
 		return (0);
 
 	r = read(file_descriptor, buff, letters);
