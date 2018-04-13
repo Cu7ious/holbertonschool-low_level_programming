@@ -33,3 +33,8 @@ typedef struct dlistint_s
     struct dlistint_s *next;
 } dlistint_t;
 ```
+
+### Summary
+```
+0-print_dlistint.c		// prints all the elements of a dlistint_t list
+```
