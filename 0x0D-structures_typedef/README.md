@@ -1,5 +1,7 @@
 # 0x0D. C - Structures, typedef
 
+More on [structures](http://www.catb.org/esr/structure-packing/)
+
 Summary
 
 ```
