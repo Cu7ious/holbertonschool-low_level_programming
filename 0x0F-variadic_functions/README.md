@@ -1,5 +1,7 @@
 # 0x0F. C - Variadic functions
 
+More on [variadic functions](https://www.gnu.org/software/libc/manual/html_node/How-Variadic.html#How-Variadic)
+
 Summary
 
 ```
