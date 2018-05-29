@@ -10,4 +10,5 @@
 !.gitignore
 
 a.out
-*-main.c
+!*-main.c
+!-O
