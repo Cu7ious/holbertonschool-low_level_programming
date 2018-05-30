@@ -1,5 +1,10 @@
 #include "sort.h"
 
+/**
+ * swap - swaps the elements of a d l list
+ * @prev: previous el
+ * @curr: current el
+ */
 void swap(listint_t *prev, listint_t *curr)
 {
 	curr->prev = prev->prev;
