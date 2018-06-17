@@ -4,6 +4,13 @@
 
 
 def check_borders(x, y, grid):
+    """ Checks borders of the island cell
+
+        Args:
+            x: the x coordinate of the grid
+            y: the y coordinate of the grid
+            grid: the coordinates grid
+    """
     count = 4
 
     if grid[x - 1][y] == 1:
@@ -43,4 +50,4 @@ def island_perimeter(grid):
             if grid[x][y] == 1:
                 perimeter += check_borders(x, y, grid)
 
-    return perimeter
+    return perimeter if perimeter > 0 else None
