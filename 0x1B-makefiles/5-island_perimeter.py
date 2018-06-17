@@ -13,11 +13,11 @@ def check_borders(x, y, grid):
     """
     count = 4
 
-    if x > 0 and x is not 0:
+    if x > 0:
         if grid[x - 1][y] == 1:
             count -= 2
 
-    if y > 0 and y is not 0:
+    if y > 0:
         if grid[x][y - 1] == 1:
             count -= 2
 
