@@ -13,19 +13,16 @@ def check_borders(x, y, grid):
     """
     count = 4
 
-    if grid[x - 1][y] == 1:
-        count -= 1
+    if x > 0 and x is not 0:
+        if grid[x - 1][y] == 1:
+            count -= 2
 
-    if grid[x + 1][y] == 1:
-        count -= 1
-
-    if grid[x][y - 1] == 1:
-        count -= 1
-
-    if grid[x][y + 1] == 1:
-        count -= 1
+    if y > 0 and y is not 0:
+        if grid[x][y - 1] == 1:
+            count -= 2
 
     return count
+
 
 def island_perimeter(grid):
     """ Returns the perimeter of the island described in grid
