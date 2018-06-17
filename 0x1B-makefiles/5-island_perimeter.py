@@ -41,13 +41,13 @@ def island_perimeter(grid):
                 The island doesn’t have 'lakes' (water inside that isn't
                     connected to the water around the island)
     """
-    len_X = len(grid) - 1
-    len_Y = len(grid[0]) - 1
+    len_X = len(grid)
+    len_Y = len(grid[0])
     perimeter = 0
 
-    for x in range(1, len_X):
-        for y in range(1, len_Y):
+    for x in range(len_X):
+        for y in range(len_Y):
             if grid[x][y] == 1:
                 perimeter += check_borders(x, y, grid)
 
-    return perimeter if perimeter > 0 else None
+    return perimeter
